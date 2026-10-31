@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function</title>
+  </head>
+  <body>
+
+    <button type="button" onclick="sayhello()">Duarr</button>
+    <form>
+      <label>Fahrenheit</label><br>
+      <input type="number" id="F" placeholder="enter the tempereture in Fahrenheit"><br>
+      <button type="button" onclick="toCelcius()">Convert</button><br>
+      <label>Celcius</label>
+      <h1 id="convertedTemp">0</h1>
+    </form>
+
+    <form>
+      <label>Number 1</label><br>
+      <input type="number" id="n1" placeholder="input number 1"><br><br>
+
+      <label>Number 2</label><br>
+      <input type="number" id="n2" placeholder="input number 2"><br><br>
+
+      <button type="button" onclick="rPlus()">+</button>
+      <button type="button" onclick="rMinus()">-</button>
+      <button type="button" onclick="rTimes()">x</button>
+      <button type="button" onclick="rDivides()">÷</button><br><br>
+
+      <label>Result</label>
+      <h1 id="resultan">0</h1>
+    </form>
+  </body>
+  <script>
+    function rPlus(){
+      let f = document.getElementById("n1").value;
+      let s = document.getElementById("n2").value;
+      let p = Number(f)+Number(s);
+      return document.getElementById("resultan").innerHTML=p;
+    }
+
+    function rMinus(){
+      let f = document.getElementById("n1").value;
+      let s = document.getElementById("n2").value;
+      let p = Number(f)-Number(s);
+      return document.getElementById("resultan").innerHTML=p;
+    }
+
+    function rTimes(){
+      let f = document.getElementById("n1").value;
+      let s = document.getElementById("n2").value;
+      let p = Number(f)*Number(s);
+      return document.getElementById("resultan").innerHTML=p;
+    }
+
+    function rDivides(){
+      let f = document.getElementById("n1").value;
+      let s = document.getElementById("n2").value;
+      let p = Number(f)/Number(s);
+      return document.getElementById("resultan").innerHTML=p;
+    }
+
+    function sayhello(){
+      return alert("Hello user!!");
+    }
+    function toCelcius(){
+      let suhuFahrenheit = document.getElementById("F").value;
+      let convert = (5/9)*(suhuFahrenheit-32);
+      return document.getElementById("convertedTemp").innerHTML=convert.toFixed(2);
+    }
+  </script>
+</html>
